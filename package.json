@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/goit-js-hw-09",
     "preview": "vite preview"
   },
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
@@ -16,5 +16,8 @@
     "postcss-sort-media-queries": "^6.7.1",
     "prettier": "^3.4.2",
     "vite": "^7.3.7"
+  },
+  "dependencies": {
+    "simplelightbox": "^2.14.3"
   }
 }
