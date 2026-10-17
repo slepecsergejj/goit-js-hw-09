@@ -32,10 +32,14 @@ h1 {
   line-height: 1.2;
 }
 
-.main-btn {
+.home-links {
   display: flex;
   gap: 24px;
   padding-left: 20px;
+}
+
+.back-link {
+  display: inline-block;
   margin-bottom: 24px;
   text-decoration: none;
 }
@@ -77,7 +81,7 @@ h1 {
   transform: scale(1.04);
 }
 
-.form {
+.feedback-form {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -87,15 +91,15 @@ h1 {
   border-radius: 8px;
 }
 
-.form label {
+.feedback-form label {
   display: flex;
   flex-direction: column;
   gap: 8px;
   font-weight: 500;
 }
 
-.form input,
-.form textarea {
+.feedback-form input,
+.feedback-form textarea {
   width: 100%;
   padding: 8px 12px;
   border: 1px solid #808080;
@@ -104,21 +108,21 @@ h1 {
   font: inherit;
 }
 
-.form input {
+.feedback-form input {
   min-height: 40px;
 }
 
-.form textarea {
+.feedback-form textarea {
   resize: vertical;
 }
 
-.form input:focus,
-.form textarea:focus {
+.feedback-form input:focus,
+.feedback-form textarea:focus {
   border-color: #4e75ff;
   outline: 1px solid #4e75ff;
 }
 
-.form button {
+.feedback-form button {
   align-self: flex-start;
   min-width: 95px;
   padding: 8px 16px;
@@ -130,7 +134,7 @@ h1 {
   cursor: pointer;
 }
 
-.form button:hover {
+.feedback-form button:hover {
   background: #6c8cff;
 }
 
@@ -144,7 +148,7 @@ h1 {
     gap: 16px;
   }
 
-  .main-btn {
+  .home-links {
     flex-direction: column;
     gap: 8px;
   }

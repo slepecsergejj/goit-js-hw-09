@@ -1,25 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Feedback form</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <script type="module" src="./2-form.js"></script>
   </head>
   <body>
-    <a class="main-btn" href="./index.html">Go to main</a>
-    <h1 class="page-title">Form</h1>
-    <form class="feedback-form" autocomplete="off">
-      <label>
-        Email
-        <input type="email" name="email" autofocus />
-      </label>
-      <label>
-        Message
-        <textarea name="message" rows="8"></textarea>
-      </label>
-      <button type="submit">Submit</button>
-    </form>
-    <script type="module" src="./js/2-form.js"></script>
+    <main class="page form-page">
+      <a class="back-link" href="../index.html">← На головну</a>
+      <h1 class="page-title">Feedback form</h1>
+      <form class="feedback-form" autocomplete="off">
+        <label>
+          Email
+          <input type="email" name="email" autofocus />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="8"></textarea>
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
   </body>
 </html>

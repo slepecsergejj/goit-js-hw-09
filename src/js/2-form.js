@@ -3,7 +3,7 @@ import '../css/styles.css';
 const form = document.querySelector('.feedback-form');
 const STORAGE_KEY = 'feedback-form-state';
 
-const formState = {
+const formData = {
   email: '',
   message: '',
 };
@@ -11,16 +11,19 @@ const formState = {
 function loadFormState() {
   try {
     const savedState = localStorage.getItem(STORAGE_KEY);
+
     if (!savedState) return;
 
     const parsedState = JSON.parse(savedState);
-    formState.email =
+
+    formData.email =
       typeof parsedState.email === 'string' ? parsedState.email : '';
-    formState.message =
+
+    formData.message =
       typeof parsedState.message === 'string' ? parsedState.message : '';
 
-    form.elements.email.value = formState.email;
-    form.elements.message.value = formState.message;
+    form.elements.email.value = formData.email;
+    form.elements.message.value = formData.message;
   } catch (error) {
     localStorage.removeItem(STORAGE_KEY);
   }
@@ -28,28 +31,32 @@ function loadFormState() {
 
 function handleInput(event) {
   const { name, value } = event.target;
+
   if (name !== 'email' && name !== 'message') return;
 
-  formState[name] = value.trim();
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(formState));
+  formData[name] = value;
+
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
 }
 
 function handleSubmit(event) {
   event.preventDefault();
 
-  formState.email = form.elements.email.value.trim();
-  formState.message = form.elements.message.value.trim();
+  formData.email = form.elements.email.value.trim();
+  formData.message = form.elements.message.value.trim();
 
-  if (!formState.email || !formState.message) {
+  if (!formData.email || !formData.message) {
     alert('Fill please all fields');
     return;
   }
 
-  console.log({ ...formState });
+  console.log({ ...formData });
+
   localStorage.removeItem(STORAGE_KEY);
   form.reset();
-  formState.email = '';
-  formState.message = '';
+
+  formData.email = '';
+  formData.message = '';
 }
 
 form.addEventListener('input', handleInput);
