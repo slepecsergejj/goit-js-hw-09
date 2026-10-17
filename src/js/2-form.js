@@ -59,7 +59,7 @@ function handleSubmit(event) {
   formData.message = '';
 }
 
+loadFormState();
+
 form.addEventListener('input', handleInput);
 form.addEventListener('submit', handleSubmit);
-
-loadFormState();
