@@ -1,7 +1,7 @@
 import '../css/styles.css';
 
-const form = document.querySelector('.form');
-const STORAGE_KEY = 'form-state';
+const form = document.querySelector('.feedback-form');
+const STORAGE_KEY = 'feedback-form-state';
 
 const formState = {
   email: '',
